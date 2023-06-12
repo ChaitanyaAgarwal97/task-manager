@@ -1,0 +1,15 @@
+.btn {
+    border-radius: 0.3em;
+    background-color: rgb(19, 241, 19);
+    outline: none;
+    font-size: 1.2em;
+    margin: 1rem 0;
+    padding: 0.2em;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+    box-shadow: 0 0 8px rgb(19, 241, 19);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+}

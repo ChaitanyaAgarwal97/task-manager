@@ -1,0 +1,44 @@
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+
+form input, form textarea {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    padding: 0.2em;
+    outline: none;
+    border-radius: 0.3em;
+    border: 2px solid rgb(19, 241, 19);
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgb(19, 241, 19);
+}
+
+form label {
+    font-size: 1.2em;
+    width: fit-content;
+}
+
+form button {
+    border-radius: 0.3em;
+    background-color: rgb(19, 241, 19);
+    outline: none;
+    font-size: 1.2em;
+    margin: 1rem 0;
+    padding: 0.2em;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+form button:hover {
+    box-shadow: 0 0 8px rgb(19, 241, 19);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+}
