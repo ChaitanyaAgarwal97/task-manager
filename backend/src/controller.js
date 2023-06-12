@@ -6,7 +6,7 @@ const createTask = async (req, res) => {
   try {
     const task = req.body;
 
-    if (!task.title) {
+    if (!task.title || !task.description) {
       throw {
         status: 400,
         msg: "Please enter a title.",
@@ -17,7 +17,7 @@ const createTask = async (req, res) => {
     
     await newTask.save();
 
-    return res.status(201).send("Task created.");
+    return res.status(201).send(newTask);
   } catch (error) {
     if (error.status === 400) {
       return res.status(error.status).send(error.msg);
@@ -56,7 +56,7 @@ const markTask = async (req, res) => {
 const deleteTask = async (req, res) => {
   try {
     const id = req.body.id;
-
+    
     await Task.findByIdAndDelete(id);
 
     return res.status(200).send("Task deleted.");
